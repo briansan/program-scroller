@@ -164,16 +164,33 @@ body {
     /* Allow text selection in content areas */
     -webkit-user-select: text;
     user-select: text;
+    /* Prevent iOS Safari from zooming on double-tap */
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure images don't exceed container width on iOS */
+img {
+    max-width: 100%;
+    height: auto;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .cover-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /* Prevent iOS Safari from zooming images */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .cover-title {
@@ -201,12 +218,19 @@ body {
 
 .prayer-image {
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /* Prevent iOS Safari from zooming images */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .feedback-iframe {
@@ -467,12 +491,12 @@ body.font-large .cover-title {
     }
 
     .cover-image {
-        max-width: 700px;
+        max-width: 600px;
         margin-bottom: 3rem;
     }
 
     .prayer-image {
-        max-width: 900px;
+        max-width: 800px;
     }
 
     .feedback-iframe {
@@ -513,11 +537,11 @@ body.font-large .cover-title {
     }
 
     .cover-image {
-        max-width: 800px;
+        max-width: 700px;
     }
 
     .prayer-image {
-        max-width: 1000px;
+        max-width: 900px;
     }
 
     .feedback-iframe {
