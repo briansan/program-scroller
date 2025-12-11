@@ -112,6 +112,21 @@ body {
     max-height: 50vh;
 }
 
+/* Ensure proper height calculation on mobile devices */
+@media (max-width: 767px) {
+    .toc-dropdown.active {
+        /* Use a fixed value that's approximately half of common mobile viewport heights */
+        max-height: 400px;
+    }
+    
+    /* For very small screens, use viewport calculation */
+    @media (max-height: 800px) {
+        .toc-dropdown.active {
+            max-height: calc(50vh - var(--top-bar-height));
+        }
+    }
+}
+
 .toc-list {
     list-style: none;
     padding: 8px 0;
