@@ -166,6 +166,16 @@ body {
     user-select: text;
 }
 
+.cover-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .cover-title {
     font-size: 2.5rem;
     text-align: center;
@@ -187,6 +197,16 @@ body {
     margin-top: 2rem;
     font-weight: 500;
     letter-spacing: 0.05em;
+}
+
+.prayer-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -437,6 +457,15 @@ body.font-large .cover-title {
         padding: 40px 32px;
     }
 
+    .cover-image {
+        max-width: 700px;
+        margin-bottom: 3rem;
+    }
+
+    .prayer-image {
+        max-width: 900px;
+    }
+
     .cover-title {
         font-size: 3.5rem;
     }
@@ -468,6 +497,14 @@ body.font-large .cover-title {
 
     .section-content {
         max-width: 900px;
+    }
+
+    .cover-image {
+        max-width: 800px;
+    }
+
+    .prayer-image {
+        max-width: 1000px;
     }
 }
 
