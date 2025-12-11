@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Program</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Top Bar with Table of Contents -->
+    <header class="top-bar">
+        <div class="top-bar-content">
+            <button class="toc-toggle" id="tocToggle" aria-label="Table of Contents">
+                <span class="toc-icon">☰</span>
+                <span class="toc-label">Table of Contents</span>
+            </button>
+            <nav class="toc-dropdown" id="tocDropdown">
+                <ul class="toc-list">
+                    <li><a href="#cover" class="toc-link active" data-section="cover">Cover</a></li>
+                    <li><a href="#section1" class="toc-link" data-section="section1">Section 1</a></li>
+                    <li><a href="#section2" class="toc-link" data-section="section2">Section 2</a></li>
+                    <li><a href="#section3" class="toc-link" data-section="section3">Section 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="mainContent">
+        <!-- Cover Page Section -->
+        <section id="cover" class="section active" data-section="cover">
+            <div class="section-content">
+                <h1 class="cover-title">Service Program</h1>
+                <p class="cover-subtitle">Lorem ipsum dolor sit amet</p>
+            </div>
+        </section>
+
+        <!-- Section 1 -->
+        <section id="section1" class="section" data-section="section1">
+            <div class="section-content">
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="section2" class="section" data-section="section2">
+            <div class="section-content">
+                <h2>Section 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="section3" class="section" data-section="section3">
+            <div class="section-content">
+                <h2>Section 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Bar with Controls -->
+    <footer class="bottom-bar">
+        <button class="nav-button nav-prev" id="prevButton" aria-label="Previous Section">
+            <span>‹</span>
+        </button>
+        
+        <div class="text-control-container">
+            <button class="text-control-toggle" id="textControlToggle" aria-label="Text Controls">
+                <span class="hamburger-icon">☰</span>
+            </button>
+            <div class="text-control-menu" id="textControlMenu">
+                <div class="control-group">
+                    <label for="fontSize">Font Size</label>
+                    <div class="font-size-controls">
+                        <button class="font-size-btn" data-size="small">A</button>
+                        <button class="font-size-btn active" data-size="medium">A</button>
+                        <button class="font-size-btn" data-size="large">A</button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="language">Language</label>
+                    <div class="language-controls">
+                        <button class="language-btn active" data-lang="en">English</button>
+                        <button class="language-btn" data-lang="ko">한국어</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="nav-button nav-next" id="nextButton" aria-label="Next Section">
+            <span>›</span>
+        </button>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
