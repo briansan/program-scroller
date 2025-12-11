@@ -240,6 +240,50 @@ function setFontSize(size) {
     }
 }
 
+// Translations object
+const translations = {
+    en: {
+        'toc-label': 'Table of Contents',
+        'toc-cover': 'Cover',
+        'toc-section1': 'Section 1',
+        'toc-section2': 'Section 2',
+        'toc-section3': 'Section 3',
+        'cover-title': 'Service Program',
+        'cover-subtitle': 'Lorem ipsum dolor sit amet',
+        'section1-title': 'Section 1',
+        'section1-p1': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        'section1-p2': 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'section2-title': 'Section 2',
+        'section2-p1': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        'section2-p2': 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'section3-title': 'Section 3',
+        'section3-p1': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        'section3-p2': 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'font-size-label': 'Font Size',
+        'language-label': 'Language'
+    },
+    ko: {
+        'toc-label': '목차',
+        'toc-cover': '표지',
+        'toc-section1': '1부',
+        'toc-section2': '2부',
+        'toc-section3': '3부',
+        'cover-title': '예배 프로그램',
+        'cover-subtitle': '한글 로렘 입숨 더미 텍스트',
+        'section1-title': '1부',
+        'section1-p1': '한글 로렘 입숨은 한국어로 된 더미 텍스트입니다. 다양한 한글 문장과 단어를 사용하여 텍스트의 레이아웃과 디자인을 테스트하는 데 사용됩니다. 이 텍스트는 실제 의미를 전달하지 않지만, 한글의 특성을 잘 보여줍니다.',
+        'section1-p2': '한글은 조선 세종대왕이 창제한 독창적인 문자 체계입니다. 자음과 모음의 조합으로 이루어져 있으며, 과학적이고 체계적인 구조를 가지고 있습니다. 한글은 배우기 쉽고 사용하기 편리한 문자로 세계적으로 인정받고 있습니다.',
+        'section2-title': '2부',
+        'section2-p1': '한글 로렘 입숨은 한국어로 된 더미 텍스트입니다. 다양한 한글 문장과 단어를 사용하여 텍스트의 레이아웃과 디자인을 테스트하는 데 사용됩니다. 이 텍스트는 실제 의미를 전달하지 않지만, 한글의 특성을 잘 보여줍니다.',
+        'section2-p2': '한글은 조선 세종대왕이 창제한 독창적인 문자 체계입니다. 자음과 모음의 조합으로 이루어져 있으며, 과학적이고 체계적인 구조를 가지고 있습니다. 한글은 배우기 쉽고 사용하기 편리한 문자로 세계적으로 인정받고 있습니다.',
+        'section3-title': '3부',
+        'section3-p1': '한글 로렘 입숨은 한국어로 된 더미 텍스트입니다. 다양한 한글 문장과 단어를 사용하여 텍스트의 레이아웃과 디자인을 테스트하는 데 사용됩니다. 이 텍스트는 실제 의미를 전달하지 않지만, 한글의 특성을 잘 보여줍니다.',
+        'section3-p2': '한글은 조선 세종대왕이 창제한 독창적인 문자 체계입니다. 자음과 모음의 조합으로 이루어져 있으며, 과학적이고 체계적인 구조를 가지고 있습니다. 한글은 배우기 쉽고 사용하기 편리한 문자로 세계적으로 인정받고 있습니다.',
+        'font-size-label': '글자 크기',
+        'language-label': '언어'
+    }
+};
+
 function setLanguage(lang) {
     state.language = lang;
     document.documentElement.setAttribute('lang', lang);
@@ -247,15 +291,18 @@ function setLanguage(lang) {
 }
 
 function updateLanguage() {
-    // This function can be expanded to update text content based on language
-    // For now, it just sets the lang attribute
-    document.documentElement.setAttribute('lang', state.language);
+    const lang = state.language;
+    const translation = translations[lang] || translations.en;
     
-    // You can add translation logic here later
-    // For example:
-    // const translations = {
-    //     en: { ... },
-    //     ko: { ... }
-    // };
+    // Update all elements with data-translate attribute
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translation[key]) {
+            element.textContent = translation[key];
+        }
+    });
+    
+    // Update TOC label if it's showing a section title
+    updateTOCLabel();
 }
 

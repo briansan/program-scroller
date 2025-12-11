@@ -12,14 +12,14 @@
         <div class="top-bar-content">
             <button class="toc-toggle" id="tocToggle" aria-label="Table of Contents">
                 <span class="toc-icon">☰</span>
-                <span class="toc-label">Table of Contents</span>
+                <span class="toc-label" data-translate="toc-label">Table of Contents</span>
             </button>
             <nav class="toc-dropdown" id="tocDropdown">
                 <ul class="toc-list">
-                    <li><a href="#cover" class="toc-link active" data-section="cover">Cover</a></li>
-                    <li><a href="#section1" class="toc-link" data-section="section1">Section 1</a></li>
-                    <li><a href="#section2" class="toc-link" data-section="section2">Section 2</a></li>
-                    <li><a href="#section3" class="toc-link" data-section="section3">Section 3</a></li>
+                    <li><a href="#cover" class="toc-link active" data-section="cover" data-translate="toc-cover">Cover</a></li>
+                    <li><a href="#section1" class="toc-link" data-section="section1" data-translate="toc-section1">Section 1</a></li>
+                    <li><a href="#section2" class="toc-link" data-section="section2" data-translate="toc-section2">Section 2</a></li>
+                    <li><a href="#section3" class="toc-link" data-section="section3" data-translate="toc-section3">Section 3</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,8 +30,8 @@
         <!-- Cover Page Section -->
         <section id="cover" class="section active" data-section="cover">
             <div class="section-content">
-                <h1 class="cover-title">Service Program</h1>
-                <p class="cover-subtitle">Lorem ipsum dolor sit amet</p>
+                <h1 class="cover-title" data-translate="cover-title">Service Program</h1>
+                <p class="cover-subtitle" data-translate="cover-subtitle">Lorem ipsum dolor sit amet</p>
                 <p class="cover-version">v1.0.0</p>
             </div>
         </section>
@@ -39,27 +39,27 @@
         <!-- Section 1 -->
         <section id="section1" class="section" data-section="section1">
             <div class="section-content">
-                <h2>Section 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2 data-translate="section1-title">Section 1</h2>
+                <p data-translate="section1-p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p data-translate="section1-p2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </section>
 
         <!-- Section 2 -->
         <section id="section2" class="section" data-section="section2">
             <div class="section-content">
-                <h2>Section 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2 data-translate="section2-title">Section 2</h2>
+                <p data-translate="section2-p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p data-translate="section2-p2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </section>
 
         <!-- Section 3 -->
         <section id="section3" class="section" data-section="section3">
             <div class="section-content">
-                <h2>Section 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2 data-translate="section3-title">Section 3</h2>
+                <p data-translate="section3-p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p data-translate="section3-p2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </section>
     </main>
@@ -76,7 +76,7 @@
             </button>
             <div class="text-control-menu" id="textControlMenu">
                 <div class="control-group">
-                    <label for="fontSize">Font Size</label>
+                    <label for="fontSize" data-translate="font-size-label">Font Size</label>
                     <div class="font-size-controls">
                         <button class="font-size-btn" data-size="small">A</button>
                         <button class="font-size-btn active" data-size="medium">A</button>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="control-group">
-                    <label for="language">Language</label>
+                    <label for="language" data-translate="language-label">Language</label>
                     <div class="language-controls">
                         <button class="language-btn active" data-lang="en">English</button>
                         <button class="language-btn" data-lang="ko">한국어</button>
