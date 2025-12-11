@@ -23,6 +23,11 @@
 html {
     touch-action: manipulation;
     -ms-touch-action: manipulation;
+    /* Prevent iOS Safari text size adjustment */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -36,6 +41,14 @@ body {
     padding-top: var(--top-bar-height);
     touch-action: manipulation;
     -ms-touch-action: manipulation;
+    /* Prevent iOS Safari text size adjustment */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /* Prevent iOS Safari zoom on input focus */
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* Top Bar */
@@ -145,6 +158,9 @@ body {
 .section-content {
     max-width: 800px;
     margin: 0 auto;
+    /* Allow text selection in content areas */
+    -webkit-user-select: text;
+    user-select: text;
 }
 
 .cover-title {
