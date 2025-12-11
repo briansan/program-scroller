@@ -109,7 +109,7 @@ body {
 }
 
 .toc-dropdown.active {
-    max-height: calc(100vh - var(--top-bar-height) - 20px);
+    max-height: 50vh;
 }
 
 .toc-list {
