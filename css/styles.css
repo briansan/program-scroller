@@ -422,8 +422,7 @@ p {
     justify-content: center;
 }
 
-.font-size-btn,
-.language-btn {
+.font-size-btn {
     padding: 8px 16px;
     border: 1px solid var(--border-color);
     background-color: var(--bg-color);
@@ -432,6 +431,17 @@ p {
     cursor: pointer;
     transition: all 0.2s;
     font-size: 1rem;
+}
+
+.language-btn {
+    padding: 6px 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.875rem;
 }
 
 .font-size-btn {
