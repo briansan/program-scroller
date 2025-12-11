@@ -209,6 +209,15 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.feedback-iframe {
+    width: 100%;
+    min-height: 800px;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
 h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -466,6 +475,10 @@ body.font-large .cover-title {
         max-width: 900px;
     }
 
+    .feedback-iframe {
+        min-height: 900px;
+    }
+
     .cover-title {
         font-size: 3.5rem;
     }
@@ -505,6 +518,10 @@ body.font-large .cover-title {
 
     .prayer-image {
         max-width: 1000px;
+    }
+
+    .feedback-iframe {
+        min-height: 1000px;
     }
 }
 

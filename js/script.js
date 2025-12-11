@@ -455,7 +455,7 @@ function updateLanguage() {
         const key = element.getAttribute('data-translate');
         if (translation[key]) {
             // Use innerHTML for elements that contain formatted content (readings, carols)
-            if (element.classList.contains('reading-text') || element.classList.contains('carol-text') || element.classList.contains('feedback-content')) {
+            if (element.classList.contains('reading-text') || element.classList.contains('carol-text')) {
                 element.innerHTML = translation[key];
             } else {
                 element.textContent = translation[key];
