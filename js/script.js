@@ -67,9 +67,15 @@ function initializeSections() {
 // Get section title
 function getSectionTitle(section) {
     const h1 = section.querySelector('h1');
-    const h2 = section.querySelector('h2');
     if (h1) return h1.textContent.trim();
-    if (h2) return h2.textContent.trim();
+    
+    // Get title from TOC link
+    const sectionId = section.getAttribute('data-section');
+    const tocLink = document.querySelector(`.toc-link[data-section="${sectionId}"]`);
+    if (tocLink) {
+        return tocLink.textContent.trim();
+    }
+    
     return 'Table of Contents';
 }
 
