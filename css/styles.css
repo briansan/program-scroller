@@ -90,7 +90,7 @@ body {
 
 .toc-label {
     flex: 1;
-    text-align: left;
+    text-align: center;
 }
 
 .toc-dropdown {
@@ -123,6 +123,7 @@ body {
     color: var(--text-color);
     text-decoration: none;
     transition: background-color 0.2s;
+    text-align: center;
 }
 
 .toc-link:hover,
@@ -192,6 +193,14 @@ h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
+}
+
+.reading-reference {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    text-align: center;
 }
 
 .reading-subtitle,
