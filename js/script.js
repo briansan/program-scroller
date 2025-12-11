@@ -64,6 +64,24 @@ function initializeSections() {
     }
 }
 
+// Get section title
+function getSectionTitle(section) {
+    const h1 = section.querySelector('h1');
+    const h2 = section.querySelector('h2');
+    if (h1) return h1.textContent.trim();
+    if (h2) return h2.textContent.trim();
+    return 'Table of Contents';
+}
+
+// Update TOC label with current section title
+function updateTOCLabel() {
+    const tocLabel = document.querySelector('.toc-label');
+    const currentSection = state.sections[state.currentSection];
+    if (tocLabel && currentSection) {
+        tocLabel.textContent = getSectionTitle(currentSection);
+    }
+}
+
 // Show specific section
 function showSection(index) {
     if (index < 0 || index >= state.sections.length) return;
@@ -79,6 +97,9 @@ function showSection(index) {
     
     // Update TOC active state
     updateTOCActive();
+    
+    // Update TOC label with section title
+    updateTOCLabel();
     
     // Update navigation buttons
     updateNavigationButtons();
