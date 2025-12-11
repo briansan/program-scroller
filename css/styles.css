@@ -101,13 +101,15 @@ body {
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--border-color);
     max-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     transition: max-height 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    -webkit-overflow-scrolling: touch;
 }
 
 .toc-dropdown.active {
-    max-height: 300px;
+    max-height: calc(100vh - var(--top-bar-height) - 20px);
 }
 
 .toc-list {
@@ -189,6 +191,46 @@ body {
 h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.reading-subtitle,
+.carol-subtitle {
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.reading-text,
+.carol-text {
+    line-height: 1.8;
+}
+
+.reading-text p,
+.carol-text p {
+    margin-bottom: 1.25rem;
+}
+
+.verse {
+    margin-bottom: 1.5rem;
+}
+
+.verse strong {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.refrain {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.refrain strong {
+    font-weight: 600;
     color: var(--primary-color);
 }
 
