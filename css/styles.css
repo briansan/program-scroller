@@ -250,11 +250,12 @@ img {
 
 .feedback-iframe {
     width: 100%;
-    min-height: 800px;
+    height: calc(100vh - var(--top-bar-height) - var(--bar-height) - 40px);
     border: none;
     border-radius: 8px;
     display: block;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 h2 {
@@ -525,7 +526,7 @@ body.font-large .cover-title {
     }
 
     .feedback-iframe {
-        min-height: 900px;
+        height: calc(100vh - var(--top-bar-height) - var(--bar-height) - 80px);
     }
 
     .cover-title {
@@ -570,7 +571,7 @@ body.font-large .cover-title {
     }
 
     .feedback-iframe {
-        min-height: 1000px;
+        height: calc(100vh - var(--top-bar-height) - var(--bar-height) - 120px);
     }
 }
 
